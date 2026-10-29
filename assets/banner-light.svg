@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">go-public</title>
+  <desc id="desc">Private source. Reviewed tree. Fresh public release.</desc>
+  <rect width="1280" height="400" rx="20" fill="#f3f1ec"/>
+  <path d="M48 48h1184v304H48z" fill="none" stroke="#d1cfc8"/>
+  <rect x="48" y="48" width="7" height="304" fill="#e65c2f"/>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace">
+    <text x="88" y="111" font-size="16" letter-spacing="2" fill="#62645f">A DELIBERATE PATH TO OPEN SOURCE</text>
+    <text x="83" y="205" font-size="78" font-weight="700" letter-spacing="-4" fill="#171b1e">go-public<tspan fill="#e65c2f">_</tspan></text>
+    <text x="88" y="253" font-size="20" fill="#62645f">Keep the history private.</text>
+    <text x="88" y="284" font-size="20" fill="#62645f">Publish the reviewed tree.</text>
+    <g fill="#171b1e" font-size="17">
+      <rect x="790" y="94" width="354" height="58" rx="8" fill="#e7e5de"/>
+      <text x="814" y="130"><tspan fill="#e65c2f">01</tspan> REVIEW THE SOURCE</text>
+      <path d="M967 156v20m-5-5 5 5 5-5" fill="none" stroke="#999c94" stroke-width="2"/>
+      <rect x="790" y="182" width="354" height="58" rx="8" fill="#e7e5de"/>
+      <text x="814" y="218"><tspan fill="#e65c2f">02</tspan> SCAN EVERY OBJECT</text>
+      <path d="M967 244v20m-5-5 5 5 5-5" fill="none" stroke="#999c94" stroke-width="2"/>
+      <rect x="790" y="270" width="354" height="58" rx="8" fill="#171b1e"/>
+      <text x="814" y="306" fill="#f3f1ec"><tspan fill="#ff8055">03</tspan> RELEASE ONE CLEAN ROOT</text>
+    </g>
+  </g>
+</svg>

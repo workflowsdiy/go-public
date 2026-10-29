@@ -1,0 +1,11 @@
+# Copy to ~/.config/go-public/patterns.txt (or point GO_PUBLIC_PATTERNS at your copy) and replace these examples.
+# One extended regex per line, matched case-insensitively against every blob, name, commit, tag and metadata field.
+# Keep the real list outside any repository you publish: it is an inventory of what you want hidden.
+/Users/yourname
+C:\\Users\\yourname
+yourname@yourcompany\.com
+192\.168\.
+10\.0\.
+your-laptop-hostname
+internal\.yourcompany\.com
+your-private-project

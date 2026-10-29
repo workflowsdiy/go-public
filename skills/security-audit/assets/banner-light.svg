@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" role="img" aria-labelledby="title description">
+  <title id="title">security-audit</title>
+  <desc id="description">Evidence before findings. Focused review by default, comprehensive audits on request.</desc>
+  <style>
+    text { fill: #132238; font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .muted { fill: #5b6675; }
+    .accent { fill: #087f6e; }
+    .card { fill: #ffffff; stroke: #d6dee5; stroke-width: 2; }
+  </style>
+  <rect x="1" y="1" width="1278" height="378" rx="20" fill="#f6f8fa" stroke="#d6dee5" stroke-width="2"/>
+  <text x="64" y="76" font-size="16" letter-spacing="3" class="accent">SOURCE / BOUNDARIES / EVIDENCE</text>
+  <text x="60" y="163" font-size="62" font-weight="700">security-audit</text>
+  <text x="64" y="215" font-size="25" class="muted">Evidence before findings.</text>
+  <text x="64" y="291" font-size="17">Focused review by default.</text>
+  <text x="64" y="322" font-size="17" class="muted">Comprehensive audits on request.</text>
+  <path d="M 924 116 V 278" fill="none" stroke="#087f6e" stroke-width="2" stroke-dasharray="6 7"/>
+  <rect x="812" y="170" width="96" height="62" rx="9" class="card"/>
+  <rect x="944" y="170" width="96" height="62" rx="9" class="card"/>
+  <rect x="1076" y="170" width="116" height="62" rx="9" class="card"/>
+  <path d="M 908 201 H 944 M 1040 201 H 1076" fill="none" stroke="#087f6e" stroke-width="2"/>
+  <text x="860" y="208" font-size="17" text-anchor="middle">input</text>
+  <text x="992" y="208" font-size="17" text-anchor="middle">control</text>
+  <text x="1134" y="208" font-size="17" text-anchor="middle">evidence</text>
+  <text x="812" y="311" font-size="12" letter-spacing="2" class="muted">TRACE. OBSERVE. VERIFY.</text>
+</svg>
