@@ -40,6 +40,10 @@ These controls apply to focused and comprehensive reviews. Run target-controlled
 
 Use present tools/dependencies and dummy data. Do not install or fetch dependencies, contact deployments or external services, use real identities, stress shared resources, publish artifacts or continue past the minimum effect. If any control is unavailable, do not execute: continue source review and name the exact missing capability. An isolated disposable source copy is allowed when a build must write beside source.
 
+Use existing authorized test environments and installed toolchains that enforce these controls. Do not provision VMs, download OS images, enable host virtualization features or build custom sandbox infrastructure to obtain missing coverage. An unavailable environment ends that execution attempt; continue the review with the available evidence.
+
+For each requested native platform, record the reviewed commit, actual OS/runtime, command and result. If the platform or required controls are unavailable, report **not run — native compatibility unverified**, with the exact reason. A Linux container verifies Linux, regardless of its host OS. A missing compatibility check alone is a review limit, not a vulnerability finding. A source-grounded security lead that depends on the missing check remains needs validation; unresolved in-scope security coverage still prevents a complete comprehensive audit.
+
 In focused mode, retain no target-controlled files; return observations in chat and clean up scratch. Comprehensive mode retains minimum evidence only through the parent-owned [promotion procedure](RECONNAISSANCE.md#write-isolation).
 
 ## Explicit comprehensive workflow

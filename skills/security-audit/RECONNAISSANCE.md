@@ -47,7 +47,7 @@ Select companion files by a source-visible boundary in their `When to use this f
 
 ### Local execution preflight
 
-Before the first target-controlled command, verify one existing sandbox/toolchain can enforce all controls in [SKILL.md](SKILL.md#universal-execution-safety). Record the exact invocation, limits and safe environment allowlist; reuse it while those facts hold. Run one small existing case before writing a harness. Use locally available dependencies only. Missing capabilities block execution, not source review; record the precise gap rather than installing tools or building replacement infrastructure.
+Before the first target-controlled command, verify one existing sandbox/toolchain can enforce all controls in [SKILL.md](SKILL.md#universal-execution-safety), including its existing-environment and native-check reporting rules. Record the exact invocation, limits and safe environment allowlist; reuse it while those facts hold. Run one small existing case before writing a harness. Use locally available dependencies only. Missing capabilities block execution, not source review; record the precise gap rather than installing tools or building replacement infrastructure.
 
 ### Write isolation
 

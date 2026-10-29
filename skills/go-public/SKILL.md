@@ -17,10 +17,13 @@ step 7, and report what would have to change. "Get it ready": do steps 1 to 8 an
 
 **Gates.** A step passes only against a named commit. Any change to the tree afterwards (README, banner, a fix)
 sends the work back to step 4. A review that fails, times out or can't run blocks the release; it is never skipped.
+Unavailable native compatibility checks follow step 8; they do not waive an unresolved security finding or a
+required independent review.
 
 **Prerequisites.** Install both shipped skill folders, `go-public` and `security-audit`. The audit folder must
 include its companion files, report schema and validators. Node.js runs those validators.
-Set `GO_PUBLIC_SKILL_DIR` to the absolute directory containing this `SKILL.md`; helper commands below use it.
+Set `GO_PUBLIC_SKILL_DIR` to the absolute directory containing this `SKILL.md`, resolving symlinks; helper commands
+below use it, and the bundled audit is its sibling `../security-audit`.
 
 ## 0. Ask the owner first, once
 
@@ -86,8 +89,9 @@ Each review names the pinned commit; preparation and publication use the frozen 
 mode reports required changes only. Otherwise, fix findings in the working repository, with regression tests
 where applicable, then return to step 4.
 
-- Resolve and read the installed `security-audit` skill and its full-audit references. If the skill, companion
-  files, schema or validators are unavailable, stop this gate.
+- Read `$GO_PUBLIC_SKILL_DIR/../security-audit/SKILL.md` and its full-audit references. Use this bundled copy
+  rather than an unrelated installed audit skill. If the skill, companion files, schema or validators are
+  unavailable, stop this gate.
 - Invoke it explicitly: "Run a full repository security audit of <absolute source path> at <pinned SHA>, using
   the standard profile and all repository paths. Follow all six phases and retain the reports outside both the
   source and publication repositories." Use a new external run directory and preserve compatible prior runs
@@ -166,9 +170,18 @@ and run every README example and the project's tests, on each platform the READM
 the shell form of `/plugin`: `claude plugin marketplace add <path or owner/repo>` and `claude plugin install`.
 macOS has no `timeout`; limit long commands with `perl -e 'alarm shift; exec @ARGV' <seconds> <command>`.
 
-What can't run here (a multi-gigabyte download, a GPU the machine lacks, another operating system) is tested as far
-as it can go (build, `--help`, `bash -n`, every README command's files exist) and listed in the report as not run,
-with the reason. Never drop it silently. A fix means a new commit in the working repository and back to step 4.
+Use existing authorized test environments and installed toolchains, including available local, remote or container
+environments. Target-controlled checks must meet the audit skill's execution controls. Do not provision VMs,
+download OS images, enable host virtualization features or build custom sandbox infrastructure for these checks.
+
+For each claimed platform, record the tested commit, actual OS/runtime, command and result. A Linux container
+tests Linux even on a macOS or Windows host; its pass cannot establish native compatibility. When a platform,
+dependency, GPU or required isolation control is unavailable, do only the safe checks the existing environment
+supports (such as source inspection, build or syntax checks). Mark each unavailable check **not run — native
+compatibility unverified**, with the exact reason; partial checks are not a native pass. This limitation alone
+does not block release unless the owner made that native check a requirement. If it leaves an in-scope security
+lead or required audit coverage unresolved, step 5 still blocks release. Never turn the gap into infrastructure
+work. A fix means a new commit in the working repository and back to step 4.
 
 ## 9. One approval, then publish
 

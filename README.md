@@ -92,6 +92,9 @@ images, video or audio, encrypted archives, LFS payloads, submodule contents and
 the manual checks described by the skill. A rewritten Git history cannot revoke credentials or other people's
 copies. The workflow uses a fresh public repository and keeps the source history private.
 
+Tests use existing environments; unavailable native checks remain explicitly unverified as described in
+[the stranger-test procedure](skills/go-public/SKILL.md#8-stranger-test-before-publishing).
+
 ## Licence and tools
 
 [MIT](LICENSE), copyright Joe LePage. The SVG banners are original assets included under the same licence.
@@ -99,7 +102,7 @@ The bundled audit skill is Joe LePage's adaptation of
 [Cloudflare's security-audit-skill](https://github.com/cloudflare/security-audit-skill), based on upstream
 [c1c8a8c](https://github.com/cloudflare/security-audit-skill/tree/c1c8a8c1471069fb0e188eeaff69b8e8db6564a8).
 Its [full MIT notice](skills/security-audit/LICENSE), including Cloudflare's copyright, is preserved.
-The bundled adaptation comes from snapshot `6a1ff7d48ddfa5a4f5d6e01f7965da58f341e60b`, with install
-instructions adjusted for this distribution.
+The bundled adaptation is based on snapshot `6a1ff7d48ddfa5a4f5d6e01f7965da58f341e60b` and maintained
+in this distribution.
 Git, GitHub CLI, jq, Perl, Gitleaks and ExifTool are installed separately; their source and binaries are not
 bundled here.

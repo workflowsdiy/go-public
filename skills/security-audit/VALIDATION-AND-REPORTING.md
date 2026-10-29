@@ -99,6 +99,8 @@ Any later material replacement that strengthens a verdict or changes root cause,
 
 Derive prose only from valid independently decided records, ledger evidence and retained hardening notes. The main REPORT.md states source/profile/scope, source/local-only execution, invocation spend versus any budget, prior-run use, confirmed issues, needs-validation leads, concrete non-findings and important coverage/verification limits. Give each confirmed issue its source location, lower-trust principal, exact bounded native reproduction, conditions, result, priority and smallest fix. Do not force an HTTP endpoint or deployment plan onto a local CLI/library.
 
+Include the per-platform check results and unavailable native checks required by [SKILL.md](SKILL.md#universal-execution-safety). Keep compatibility limits visible even when the source review is complete; do not mark missing security validation as covered or remove it from scope to obtain completion.
+
 Create FINDINGS-DETAIL.md only when medium-or-higher findings need the complete trace/reproduction separate from the summary. Create NEEDS-VALIDATION.md only when unresolved records need a separate handoff. Do not create empty placeholder reports or duplicate every record into several files.
 
 Set run_status complete only when all candidate dispositions and required profile reviews are final, all in-scope coverage is resolved under the profile, applicable reports exist and both validators pass. A quick/scoped run still states its partial breadth. Otherwise set incomplete with its exact reason; identify every unvalidated fingerprint, deferred/blocked area and missing review. A partial run may report independently verified findings, but never label unresolved candidates as findings or imply complete coverage.

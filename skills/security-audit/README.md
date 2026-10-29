@@ -57,8 +57,9 @@ A quick or scoped pass does not establish comprehensive coverage.
 
 Target-controlled code runs only with no external network, a safe empty allowlisted environment,
 read-only source/toolchain, scratch-only writes, and low resource and wall-clock limits.
-Use existing local tools and dummy data. If those controls or a decisive runtime fact are unavailable,
-the agent continues source review and reports the exact validation blocker.
+Use existing authorized test environments, local tools and dummy data. The agent does not build VM or sandbox
+infrastructure for missing checks. Unavailable native checks remain explicitly unverified under the
+[execution and reporting rules](SKILL.md#universal-execution-safety); missing controls still prevent execution.
 
 The workflow does not authorize production probes, real credentials, dependency downloads, publication
 or source fixes. Findings are confirmed only when the source path and a meaningful bounded observation hold.
